@@ -14,6 +14,9 @@
     </div>
 
     <p @click="onClickKey">3. key</p>
+    <div class="components" v-if="showKey">
+      <KeyMain />
+    </div>
   </div>
 </template>
 
@@ -28,6 +31,7 @@ import ParentHeader from "@/pages/event-bus/header/ParentHeader.vue";
 import ComponentMain from "@/pages/component/ComponentMain.vue";
 
 // key
+import KeyMain from "@/pages/key/KeyMain.vue";
 
 const showEventBus = ref<boolean>(true);
 const showComponent = ref<boolean>(true);
