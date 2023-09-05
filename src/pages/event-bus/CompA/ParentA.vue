@@ -1,12 +1,12 @@
 <template>
   <div class="parentHeader">
-    <h2>ParentHeader</h2>
-    <ChildHeader />
+    <h2>ParentA</h2>
+    <ChildA />
   </div>
 </template>
 
 <script setup lang="ts">
-import ChildHeader from "@/pages/event-bus/header/ChildHeader.vue";
+import ChildA from "@/pages/event-bus/CompA/ChildA.vue";
 </script>
 
 <style scoped>

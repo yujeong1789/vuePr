@@ -13,14 +13,17 @@
     <p>현재 컴포넌트:</p>
 
     <!-- 기존 v-if or v-show 사용 코드 -->
-    <!--    <IncludeCompA v-if="selectedOption === 'A'" />-->
-    <!--    <IncludeCompB v-if="selectedOption === 'B'" />-->
-    <!--    <IncludeCompC v-if="selectedOption === 'C'" />-->
-    <!--    <IncludeCompD v-if="selectedOption === 'D'" />-->
-    <!--    <IncludeCompE v-if="selectedOption === 'E'" />-->
+    <!--    <IncludeCompA v-if="selectedOption === 'A'" :msg="selectedOption + '입니다'"/>-->
+    <!--    <IncludeCompB v-if="selectedOption === 'B'" :msg="selectedOption + '입니다'"/>-->
+    <!--    <IncludeCompC v-if="selectedOption === 'C'" :msg="selectedOption + '입니다'"/>-->
+    <!--    <IncludeCompD v-if="selectedOption === 'D'" :msg="selectedOption + '입니다'"/>-->
+    <!--    <IncludeCompE v-if="selectedOption === 'E'" :msg="selectedOption + '입니다'"/>-->
 
     <!-- 특수 엘리먼트 component 사용 코드 -->
-    <component :is="componentMap.get(selectedOption)" />
+    <component
+      :is="componentMap.get(selectedOption)"
+      :msg="selectedOption + '입니다'"
+    />
   </div>
 </template>
 
@@ -33,7 +36,7 @@ import IncludeCompC from "@/pages/component/IncludeCompC.vue";
 import IncludeCompD from "@/pages/component/IncludeCompD.vue";
 import IncludeCompE from "@/pages/component/IncludeCompE.vue";
 
-const componentMap = readonly(
+const componentMap = readonly<Map<string, any>>(
   new Map([
     ["A", IncludeCompA],
     ["B", IncludeCompB],
@@ -42,7 +45,7 @@ const componentMap = readonly(
     ["E", IncludeCompE],
   ])
 );
-const selectedOption = ref<string>("");
+const selectedOption = ref<any>();
 </script>
 <style scoped>
 select {

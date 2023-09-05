@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>ChildHeader</h3>
+    <h3>ChildA</h3>
     <p>입력된 값: {{ receiveData }}</p>
   </div>
 </template>

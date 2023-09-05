@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>ChildBody</h3>
+    <h3>ChildB</h3>
     <input type="text" v-model="sendValue" />
   </div>
 </template>

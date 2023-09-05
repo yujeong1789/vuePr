@@ -1,12 +1,12 @@
 <template>
   <div class="parentBody">
-    <h2>ParentBody</h2>
-    <ChildBody />
+    <h2>ParentB</h2>
+    <ChildB />
   </div>
 </template>
 
 <script setup lang="ts">
-import ChildBody from "@/pages/event-bus/body/ChildBody.vue";
+import ChildB from "@/pages/event-bus/CompB/ChildB.vue";
 </script>
 
 <style scoped>
